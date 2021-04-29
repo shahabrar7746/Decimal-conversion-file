@@ -14,43 +14,47 @@ public class decimalconversion{
 		 */
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		Stack<Long>bn = new Stack();
+		//defining Stack object for operation
+		Stack<Long>MyStack = new Stack();
 	
 
-
+//Giving decimal value to system for calulation of binary values
 	
 
 		
 		System.out.println();
 		System.out.println("type your decimal  values");
-		long a = 0;
+		long temp = 0;
 		try {
-		long c = sc.nextLong();
-		a = c;
+		long ip = sc.nextLong();
+		temp = ip;
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		long b = 0;
-
+		\\Value of ip will be given to temp variable to perform operations
+			\\Dummy will get binary values for decimal values given by user and further transformed to stack
+		long dummy = 0;
+\\This loop will calculate all the binary values for decimal value given by user using Scanner
 		for(int i = 1;i>0;i++) {
-			b = a%2;
-			bn.push(b);
-			a = a/2;
-			if(a == 0 | a == 1) {
-				bn.push(a);
+			dummy = temp%2;
+			MyStack.push(dummy);
+			temp = temp/2;
+			if(temp == 0 | temp == 1) {
+				MyStack.push(a);
 				break;
 			}
 		}System.out.println("binary bits for your number is ");
-		for(int i = bn.size();!bn.isEmpty();i--) {
+		\\This loop will print all values present in the stack by first come last serve mannner
+		for(int i = MyStack.size();!MyStack.isEmpty();i--) {
 			
-		if(bn.size() == i) {
+		if(MyStack.size() == i) {
 			
 			continue;
 			
 		}else {
 			
 
-			System.out.print(bn.pop() + "");
+			System.out.print(MyStack.pop() + "");
 			
 		}
 			
