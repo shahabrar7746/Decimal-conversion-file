@@ -30,7 +30,7 @@ public class decimalconversion{
 		temp = ip;
 		}catch(Exception e) {
 			e.printStackTrace();
-		}
+		}\\
 		\\Value of ip will be given to temp variable to perform operations
 			\\Dummy will get binary values for decimal values given by user and further transformed to stack
 		long dummy = 0;
